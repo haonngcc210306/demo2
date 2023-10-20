@@ -11,13 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($blink->query($sql) === true) {
         echo "Delete product successfully.";
-        header('Location: home.php');
+        header('Location:index.php');
     } else {
         echo "Error: " . $sql . $blink->error;
     }
 }
 
-$product_id = $_GET['id'];
+$product_id = $_GET['Id'];
 $sql = "SELECT * FROM product WHERE Id = $product_id";
 $result = $blink->query($sql);
 $row = $result->fetch_assoc();
