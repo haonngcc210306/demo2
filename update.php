@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$product_id = $_GET['id'];
+$product_id = $_GET['Id'];
 $sql = "SELECT * FROM product WHERE Id = $product_id";
 $result = $blink->query($sql);
 $row = $result->fetch_assoc();
